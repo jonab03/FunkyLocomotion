@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
         maven {
             name = "forge"
-            url = "http://files.minecraftforge.net/maven"
+            url = "https://maven.minecraftforge.net/"
         }
         maven {
             name = "sonatype"
@@ -11,7 +11,13 @@ buildscript {
         }
     }
     dependencies {
+        /*
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        */
+        classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.0.+') {
+            changing = true
+        }
+
     }
 }
 
@@ -22,7 +28,7 @@ group= "com.rwtema.funkylocomotion" // http://maven.apache.org/guides/mini/guide
 archivesBaseName = "funky-locomotion-1.7.10"
 
 minecraft {
-    version = "1.7.10-10.13.4.1492-1.7.10"
+    version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "eclipse"
 }
 
